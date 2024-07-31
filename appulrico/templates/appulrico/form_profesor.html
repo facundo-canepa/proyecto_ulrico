@@ -1,0 +1,16 @@
+{% extends 'appulrico/base.html' %}
+
+{% load static %}
+
+{% block titulo %}Formulario - Agregar Profesor{% endblock %}
+
+{% block contenidoQueCambia %}
+    <!-- action: representa la URL a la que se enviará la información -->
+    <form action="{% url 'form_profesor' %}" method="POST">
+        {% csrf_token %}
+        <p>Nombre: <input type="text" name="nombe"></p>
+        <p>Apellido: <input type="text" name="apellido"></p>
+        <p>Email: <input type="text" name="email"></p>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'appulrico/base.html' %}
+
+{% block title %} Formulario de Curso {% endblock title %}
+
+{% block contenidoQueCambia %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <table>
+            {{ curso_formulario.as_table }}
+        </table>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock %}
+
+
+
+

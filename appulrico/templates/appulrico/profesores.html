@@ -1,0 +1,13 @@
+{% extends "appulrico/base.html" %}
+
+{% block titulo %} Ulrico Shmidel │ Profesores {% endblock %}
+
+{% block contenidoQueCambia %}
+<h1>Nuestros profesionales</h1>
+
+{% for profesor in profesores %}
+    {{ profesor.nombre }} {{ profesor.apellido }} - {{ profesor.profesion }}
+    <br>
+{% endfor %}
+
+{% endblock %}

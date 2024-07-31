@@ -1,0 +1,19 @@
+{% extends "appulrico/base.html" %}
+
+{% block titulo %}Ulrico Shmidel │ Cursos{% endblock %}
+
+{% block contenidoQueCambia %}
+
+{% include 'appulrico/publicidad.html' %}
+
+<h1>Nuestros Cursos</h1>
+
+{%for curso in cursos%}
+
+{{curso.nombre}} - {{curso.comision}}
+
+{% endfor %}
+
+{% endblock %}
+
+
