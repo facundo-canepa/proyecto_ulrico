@@ -2,15 +2,16 @@
 
 {% load static %}
 
-{% block titulo %}Formulario - Agregar Estudiante{% endblock %}
+{% block title %}Formulario - Agregar Estudiante{% endblock %}
 
 {% block contenidoQueCambia %}
-    <!-- action: representa la URL a la que se enviará la información -->
+
     <form action="{% url 'form_estudiantes' %}" method="POST">
         {% csrf_token %}
         <p>Nombre: <input type="text" name="nombe"></p>
         <p>Apellido: <input type="text" name="apellido"></p>
         <p>Email: <input type="text" name="email"></p>
+        <p>Dni: <input type="text" name="dni"></p>
         <input type="submit" value="Enviar">
     </form>
 {% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'appulrico/base.html' %}
+
+{% block title %} Éxito {% endblock title %}
+
+{% block contenidoQueCambia %}
+    <h1>¡Profesor creado con éxito!</h1>
+    <a href="{% url 'profesor2_creado_api_form' %}">Crear otro profesor</a>
+{% endblock %}

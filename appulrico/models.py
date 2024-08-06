@@ -13,7 +13,8 @@ class Estudiante(models.Model):
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
     email = models.EmailField()
-    profesion = models.CharField(max_length=100, blank=True)  # Corregido
+    dni = models.CharField(max_length=100)
+    profesion = models.CharField(max_length=100, blank=True)
 
     def __str__(self):
         return f"Nombre del Estudiante: {self.nombre} - Apellido del Estudiante : {self.apellido}"
@@ -23,7 +24,7 @@ class Profesor(models.Model):
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
     email = models.EmailField()
-    profesion = models.CharField(max_length=100)
+    especialidad = models.CharField(max_length=100)
     
     def __str__(self):
         return f"Nombre del Profesor: {self.nombre} - Apellido del Profesor : {self.apellido}"
@@ -35,3 +36,11 @@ class Entregable(models.Model):
 
     def __str__(self):
         return f"Nombre del Entregable: {self.nombre} - Entregado : {self.entregado}"
+    
+class Registro(models.Model):
+    nombre = models.CharField(max_length=100)
+    apellido = models.CharField(max_length=100)
+    email = models.EmailField()
+
+    def __str__(self):
+        return self.nombre

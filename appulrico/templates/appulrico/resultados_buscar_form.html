@@ -1,0 +1,18 @@
+{% extends 'appulrico/base.html' %}
+
+{% load static %}
+
+{% block title %} Resultados de la Búsqueda {% endblock title %}
+
+{% block contenidoQueCambia %}
+    <h2>Resultados de la Búsqueda</h2>
+    {% if cursos %}
+        <ul>
+            {% for curso in cursos %}
+                <li>{{ curso.nombre }} - {{ curso.comision }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No se encontraron cursos.</p>
+    {% endif %}
+{% endblock %}

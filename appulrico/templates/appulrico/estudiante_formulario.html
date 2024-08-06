@@ -1,0 +1,12 @@
+{% extends 'appulrico/base.html' %}
+
+{% block title %} Crear Estudiante {% endblock title %}
+
+{% block contenidoQueCambia %}
+    <h1>Formulario de Creación de Estudiante</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ estudiante_formulario.as_table}}
+        <input type="submit" value="Crear">
+    </form>
+{% endblock %}
